@@ -1,0 +1,439 @@
+body {
+    background-color: #00c7d1;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .h1{
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Exibe os itens como uma linha flexível */
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 150px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 55%;
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid #dddbdb;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.no-border {
+    border: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+           opacity: 0.4;
+    }
+}
+
+header.light-mode {
+    background-color: #00c7d1; /* Fundo branco */ 
+    color: #0f0101; /* Texto preto */
+    padding: 30px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+/* Estilo padrão do cabeçalho (dark mode) */
+header.dark-mode {
+    background-color: #333; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+    padding: 30px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+footer.light-mode {
+  background-color: #00c7d1; /* Fundo branco */ 
+  color: #0f0101; /* Texto preto */
+  padding: 30px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+/* Estilo padrão do cabeçalho (dark mode) */
+footer.dark-mode {
+  background-color: #333; /* Fundo preto */
+  color: #ffffff; /* Texto branco */
+  padding: 30px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+.dark-mode label {
+    margin-right: 10px;
+}
+
+  
+  main {
+    padding: 20px;
+  }
+  
+  .intro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Alterado para empilhar os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente os elementos */
+    text-align: center; /* Alinha o texto centralmente */
+  }
+
+  .black-overlay {
+    background-color: rgba(0, 0, 0, 0.527); /* Cor preta com transparência */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Espaço entre as divs */
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+
+  .info-box {
+    background-color: #fff;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 33.33% de largura para cada div com espaço entre elas */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 1; /* Para distribuir igualmente o espaço disponível entre as divs */
+    position: relative;
+    transition: transform 0.3s ease; 
+  }
+  
+  .info-box p {
+    margin: 0;
+  }
+  
+  .info-box:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  
+  .intro p {
+    margin-right: 20px; /* Espaço entre o texto e a imagem */
+  }
+  
+  .intro-image {
+    max-width: 100%; /* Ajusta a imagem para caber dentro do espaço disponível */
+  }
+  
+  .blue-div {
+    background-color: rgba(0, 199, 209, 0.267);
+    height: 400px;
+    width: 410px; /* Defina a largura desejada */
+    left: auto;
+    margin-left: 100px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px; /* Adiciona uma leve borda mais arredondada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 25px;
+    align-self: flex-start;
+    flex: 1;
+  }
+
+  .small-image {
+    max-width: 300px;
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: -450px; 
+    margin-top: -300px;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start; /* Alinhe os elementos ao topo verticalmente */
+    flex-wrap: wrap;
+  }
+
+
+  .saiba-mais-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00c7d1;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    width: 150px;
+    height: auto;
+    margin-top: 50px; 
+    margin-bottom: 30px;
+    margin-right: -480px;
+    font-weight: bold;
+  }
+  
+  .saiba-mais-button:hover {
+    background-color: #0056b3;
+  }
+
+  .experimente{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Alterado para empilhar os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente os elementos */
+    text-align: center; /* Alinha o texto centralmente */
+  }
+
+  .experimente-gratis{
+    background-color: rgba(0, 199, 209, 0.363);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row; /* Alterado para empilhar os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente os elementos */
+    text-align: center;
+    width: 80%;
+    
+  }
+
+  .marketplace-img{
+    max-width: 100%; /* Garante que a imagem não exceda a largura da div pai */
+    height: auto; /* Mantém a proporção da imagem */
+    position: relative; /* Define o posicionamento relativo */
+    top: -50px; /* Ajusta a posição vertical da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    float: right;
+    margin-left: -80px; 
+  }
+
+  .text{
+    margin-left: 30px;
+    font-size: larger;
+  }
+
+  .email-input {
+    flex: 1;
+    padding: 10px;
+    margin-top: 400px;
+    left: 0;
+    margin-right: 10px;
+    margin-left: -720px;
+  }
+  
+  .email-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+
+  .vamos-la-button {
+    background-color: #00c7d1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 50px;
+    margin-top: 398px;
+  }
+  
+  .vamos-la-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .experimente-gratis .email-input {
+    text-align: left;
+  }
+  
+  .experimente-gratis .vamos-la-button {
+    text-align: left;
+  }
+
+  .assinatura {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .campo {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button.botao {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.botao:hover {
+    background-color: #0056b3;
+  }
+  
+  .container-slide{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+    border: 5px solid black;
+}
+
+.container-items {
+    position: absolute;
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item {
+    width: 50vw;
+    height: 50vh;
+    transition: all 1s;
+}
+.item:first-child{
+    margin-left: -100%;
+}
+
+.item img {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.action-button{
+    font: bold 30px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    color: #00000000;
+    user-select: none;
+    z-index: 1;
+}
+.action-button:hover{
+    color: white;
+    background-color: #00000055;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+  footer {
+    text-align: center;
+    background-color: #00c7d1;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .social-icon {
+    width: 20px; 
+    height: 20px; 
+    margin: 5px; 
+  }

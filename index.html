@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockPro+</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+  <header class="dark-mode">
+    <div class="logo">
+      <img src="s+.png" alt="Logotipo S+" />
+    </div>
+  <nav class="navbar">
+      <ul class="nav-menu">
+          <li class="nav-item">
+              <a href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+              <a href="#cursos">Cursos</a>
+          </li>
+          <li class="nav-item">
+              <a href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+              <a href="#contato">Contato</a>
+          </li>
+      </ul>
+  </nav>
+  <center>
+    <h3>Modo claro</h3>
+<label class="switch">
+    <input type="checkbox" id="mode-switch">
+  <span class="slider round"></span></center>
+   <br>
+  </header>
+  <main>
+    <div class="intro">
+      <h1 class="h1">Sobre nós da StockPro+</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="blue-div">
+        <p>O StockPro+ é uma plataforma digital abrangente projetada para ajudar as empresas a gerenciar eficientemente seus estoques. Com recursos avançados e uma interface intuitiva, o StockPro+ permite que os usuários tenham total visibilidade e controle sobre seus estoques.</p>
+      </div>
+      <img src="img1.png" alt="imagem de estoque" class="small-image">
+      <a href="#" class="saiba-mais-button">Saiba mais</a>
+    </div>
+    <br>
+    <br>
+    <center>
+    <h2>Veja como a S+ pode te ajudar</h2>
+    </center>
+    <br>
+    <div class="black-overlay">
+      <div class="info-box">
+        <img src="rastreamento.png">
+        <p>A plataforma oferece rastreamento em tempo real de todos os produtos em estoque, permitindo que os usuários visualizem informações detalhadas.</p>
+      </div>
+      <div class="info-box">
+        <img src="monitoramento.png">
+        <p>Com o StockPro+, os usuários podem criar, monitorar e gerenciar pedidos de compra e venda. A plataforma fornece uma visão geral completa do status de cada pedido.</p>
+      </div>
+      <div class="info-box">
+        <img src="mensagens.jpg">
+        <p>O StockPro+ envia alertas e notificações personalizáveis para ajudar os usuários a manter o controle de seus estoques. Isso inclui alertas de datas de validade próximas.</p>
+      </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="slideshow-container">
+      <div class="slide fade">
+          <img src="banana3.png" alt="Imagem 1">
+      </div>
+      <div class="slide fade">
+          <img src="banana1.png" alt="Imagem 2">
+      </div>
+      <div class="slide fade">
+          <img src="banana2.png" alt="Imagem 3">
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+    <section class="experimente">
+      <h2>Experimente de Graça</h2>
+      <div class="experimente-gratis">
+        <p class="text">PODENDO INCLUIR ATÉ + DE 300<br> 
+          PLATAFORMAS DE ECOMMERCE<br> 
+           E MARKETPLACES </p>
+          <img src="marketplace.png" class="marketplace-img">
+          <div class="email-input">
+            <input type="email" placeholder="Insira seu e-mail">
+           
+          </div>
+          <button class="vamos-la-button">Vamos lá</button>
+      </div>
+    </section>
+    <div class="assinatura">
+      <h2>Assine já</h2>
+      <form>
+        <div class="campo">
+          <label for="nome">Nome Sobrenome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Nome Sobrenome" required>
+        </div>
+        <div class="campo">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@example.com" required>
+        </div>
+        <div class="campo">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" placeholder="Senha" required>
+        </div>
+        <button type="submit" class="botao">Vamos lá</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="dark-mode">
+    <p>&copy; 2023 StockPro+</p>
+  </footer>
+
+  <script>
+    const modeSwitch = document.getElementById("mode-switch");
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+
+modeSwitch.addEventListener("change", function() {
+  if (modeSwitch.checked) {
+        header.classList.add("light-mode"); // Corrigido para adicionar a classe "light-mode"
+        header.classList.remove("dark-mode"); // Corrigido para remover a classe "dark-mode"
+    } else {
+        header.classList.remove("light-mode"); // Corrigido para remover a classe "light-mode"
+        header.classList.add("dark-mode"); // Corrigido para adicionar a classe "dark-mode"
+    }
+    if (modeSwitch.checked) {
+        footer.classList.add("light-mode"); // Corrigido para adicionar a classe "light-mode"
+        footer.classList.remove("dark-mode"); // Corrigido para remover a classe "dark-mode"
+    } else {
+        footer.classList.remove("light-mode"); // Corrigido para remover a classe "light-mode"
+        footer.classList.add("dark-mode"); // Corrigido para adicionar a classe "dark-mode"
+    }
+});
+
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
+}
+showSlides();
+  </script>
+</body>
+</html>
